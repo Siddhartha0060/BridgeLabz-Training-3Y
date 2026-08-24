@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Newspaper Layout</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: lightgray;
+            font-family: Arial;
+        }
+        .newspaper {
+            background-color: white;
+            padding: 30px;
+            margin: 30px;
+        }
+        h1 {
+            text-align: center;
+            font-size: 35px;
+            font-weight: bold;
+
+            column-span: all;
+        }
+        .article {
+            column-count: 3;
+            column-gap: 30px;
+            text-align: justify;
+            font-size: 17px;
+            line-height: 1.6;
+        }
+        .article img {
+            width: 150px;
+            height: 100px;
+            float: left;
+            margin-right: 15px;
+            margin-bottom: 10px;
+        }
+        .article p {
+            margin-bottom: 20px;
+        }
+        @media screen and (max-width: 800px) {
+            .article {
+                column-count: 2;
+            }
+        }
+        @media screen and (max-width: 600px) {
+            .article {
+                column-count: 1;
+            }
+            .newspaper {
+                margin: 10px;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="newspaper">
+        <h1>Global News</h1>
+        <div class="article">
+            <p>
+                <img src="https://static.toiimg.com/thumb/msid-133474732,imgsize-122790,width-400,height-225,resizemode-4/treasury-bessent.jpg">
+                The US-Iran "Economic D-Day": The United States Treasury has officially launched "Operation Economic Outcast," a sweeping expansion of sanctions designed to completely sever Iran's financial lifelines. In retaliation, Iran has threatened to halt all oil exports from the Persian Gulf and warned that any country supporting the US sanctions will face actions treated as an "act of war"
+            </p>
+            <p>
+                Strait of Hormuz Shipping Crisis: Amid ongoing naval face-offs, the US military has established a new designated shipping lane in the Strait of Hormuz to safeguard commercial tankers transiting up to 10 million barrels of oil a day. This follows reports of several commercial vessels being struck in the area over recent weeks.
+            </p>
+            <p>
+                India-China Border Talks: India’s National Security Advisor, Ajit Doval, has arrived in Beijing to spearhead the 25th round of Special Representatives’ talks, aiming to address unresolved boundary disputes along the India-China border
+            </p>
+            <p>
+                New Zealand's Social Media Ban: Parliament in New Zealand is debating a highly controversial proposal to ban social media access for children under the age of 16, a legislative move facing heavy opposition.
+            </p>
+            <p>
+                India-China Border Talks: India’s National Security Advisor, Ajit Doval, has arrived in Beijing to spearhead the 25th round of Special Representatives’ talks, aiming to address unresolved boundary disputes along the India-China border.
+            </p>
+            <p>
+                New Zealand's Social Media Ban: Parliament in New Zealand is debating a highly controversial proposal to ban social media access for children under the age of 16, a legislative move facing heavy opposition.
+            </p>
+        </div>
+    </div>
+</body>
+</html>

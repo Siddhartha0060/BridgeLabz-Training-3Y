@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Photo Gallery</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+            background-color: #f2f2f2;
+        }
+        h1 {
+            text-align: center;
+            font-size: 35px;
+            margin: 30px;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin: 30px;
+        }
+        .photo {
+            width: 30%;
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 3px 3px 10px gray;
+        }
+        .photo img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+        .caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            opacity: 0;
+        }
+        .photo:hover img {
+            transform: scale(1.1);
+        }
+        .photo:hover .caption {
+            opacity: 1;
+        }
+        @media screen and (max-width: 800px) {
+            .photo {
+                width: 45%;
+            }
+        }
+        @media screen and (max-width: 600px) {
+            .photo {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>My Photo Gallery</h1>
+    <div class="gallery">
+        <div class="photo">
+            <img src="https://media.istockphoto.com/id/517188688/photo/mountain-landscape.jpg?s=612x612&w=0&k=20&c=A63koPKaCyIwQWOTFBRWXj_PwCrR4cEoOw2S9Q7yVl8=" alt="Nature">
+            <div class="caption">Beautiful Nature</div>
+        </div>
+        <div class="photo">
+            <img src="https://www.rd.com/wp-content/uploads/2025/05/This-Stunningly-Beautiful-Beach_GettyImages-482612302_FT.jpg" alt="Beach">
+            <div class="caption">Beautiful Beach</div>
+        </div>
+        <div class="photo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Everest_North_Face_toward_Base_Camp_Tibet_Luca_Galuzzi_2006.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original" alt="Mountain">
+            <div class="caption">Mountain View</div>
+        </div>
+        <div class="photo">
+            <img src="https://media.cntraveler.com/photos/59849be51209f576909acb46/16:9/w_2560%2Cc_limit/GettyImages-530075853.jpg" alt="Lake">
+            <div class="caption">Beautiful Lake</div>
+        </div>
+        <div class="photo">
+            <img src="https://media.istockphoto.com/id/583809524/photo/alberta-wilderness-near-banff.jpg?s=612x612&w=0&k=20&c=hiI3ib9ibDxAgqEZEH09EO3JOw94v5xh6hzcuXGhO-M=" alt="Landscape">
+            <div class="caption">Amazing Landscape</div>
+        </div>
+        <div class="photo">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThIez4rGcrFGvq0i5AkldT8MEsWP_IklT7ZT0vryvnjyBzWiLcdNFdZ2c&s=10" alt="Forest">
+            <div class="caption">Green Forest</div>
+        </div>
+    </div>
+</body>
+</html>
