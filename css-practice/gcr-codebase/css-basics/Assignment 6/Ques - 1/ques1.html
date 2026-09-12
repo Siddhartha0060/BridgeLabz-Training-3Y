@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Personal Portfolio</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: lightblue;
+        }
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+        nav a {
+            text-decoration: none;
+            color: black;
+        }
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+            padding: 50px;
+        }
+        .about {
+            width: 50%;
+        }
+        .image-section {
+            width: 50%;
+            text-align: center;
+        }
+        .image-section img {
+            width: 200px;
+            height: 200px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: lightblue;
+        }
+        @media (max-width: 700px) {
+            header {
+                flex-direction: column;
+            }
+            main {
+                flex-direction: column;
+            }
+            .about,
+            .image-section {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Siddharth Singh</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <section class="about">
+            <h2>About Me</h2>
+            <p>
+                Hello! My name is Siddharth Singh.
+                I am a Computer Science student.
+                I am learning Web Development.
+            </p>
+        </section>
+        <section class="image-section">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjq93_edgltd9FiKfPkuBy5MyMIvUMA7kYb5AE3jjo3w&s=10"
+                 alt="My Photo">
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 Siddharth Singh</p>
+    </footer>
+
+</body>
+</html>

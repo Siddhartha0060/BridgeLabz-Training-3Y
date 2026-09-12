@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Homepage</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        header {
+            background-color: lightblue;
+            padding: 20px;
+        }
+        nav {
+            display: flex;
+            justify-content: space-around;
+        }
+        nav a {
+            text-decoration: none;
+            color: black;
+        }
+        main {
+            flex: 1;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            gap: 20px;
+            padding: 30px;
+        }
+        .box {
+            width: 200px;
+            height: 150px;
+            background-color: lightgreen;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0.3s;
+        }
+        .box:hover {
+            transform: rotate(2deg);
+        }
+        footer {
+            background-color: lightblue;
+            text-align: center;
+            padding: 20px;
+        }
+        @media (max-width: 700px) {
+            main {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <div class="box">
+            <h2>Services</h2>
+        </div>
+        <div class="box">
+            <h2>Projects</h2>
+        </div>
+        <div class="box">
+            <h2>Contact</h2>
+        </div>
+    </main>
+    <footer>
+        <p>© 2026 My Website</p>
+    </footer>
+</body>
+</html>
