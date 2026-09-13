@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flexbox and Grid</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: lightblue;
+        }
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+        nav a {
+            text-decoration: none;
+            color: black;
+        }
+        main {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 20px;
+            padding: 30px;
+        }
+        article {
+            padding: 20px;
+        }
+        .boxes {
+            display: flex;
+            gap: 20px;
+        }
+        .box {
+            flex: 1;
+            padding: 30px;
+            background-color: lightgreen;
+            text-align: center;
+        }
+        aside {
+            background-color: rgb(103, 95, 95);
+            padding: 30px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: lightblue;
+        }
+        h1 {
+            animation: moveUp 1s;
+        }
+        @keyframes moveUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @media (max-width: 700px) {
+            main {
+                grid-template-columns: 1fr;
+            }
+            .boxes {
+                flex-direction: column;
+            }
+            header {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Website</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <article>
+            <h2>My Article</h2>
+            <p>
+                Welcome to my website.
+                This is a simple webpage using
+                Flexbox and CSS Grid.
+            </p>
+            <div class="boxes">
+                <div class="box">
+                    <h3>HTML</h3>
+                    <p>Structure</p>
+                </div>
+                <div class="box">
+                    <h3>CSS</h3>
+                    <p>Design</p>
+                </div>
+                <div class="box">
+                    <h3>Web</h3>
+                    <p>Development</p>
+                </div>
+            </div>
+        </article>
+        <aside>
+            <h2>Sidebar</h2>
+            <p>
+                This is the sidebar section.
+            </p>
+        </aside>
+    </main>
+    <footer>
+        <p>© 2026 Siddharth Singh</p>
+    </footer>
+</body>
+</html>

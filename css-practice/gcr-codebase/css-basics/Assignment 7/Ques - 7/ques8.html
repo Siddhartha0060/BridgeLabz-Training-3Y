@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Typography</title>
+    <style>
+        body {
+            font-family: Arial;
+            padding: 40px;
+            line-height: 1.6;
+        }
+        h1 {
+            font-family: Georgia;
+            font-size: 40px;
+            text-align: center;
+            letter-spacing: 2px;
+        }
+        .article {
+            max-width: 700px;
+            margin: auto;
+        }
+        .article p {
+            font-size: 18px;
+            letter-spacing: 1px;
+            line-height: 1.8;
+        }
+        .article p::first-letter {
+            font-size: 40px;
+            font-weight: bold;
+        }
+        .article p::first-line {
+            font-weight: bold;
+        }
+        strong {
+            color: red;
+        }
+        em {
+            color: blue;
+        }
+        mark {
+            background-color: yellow;
+            color: black;
+        }
+        .small-text {
+            font-size: 14px;
+        }
+        .big-text {
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Typography and Text Styling</h1>
+    <div class="article">
+        <p>
+            Typography is an important part of web design.
+            Good typography makes a webpage easier to read
+            and more attractive.
+        </p>
+        <p>
+            <strong>Bold text</strong> is used to highlight
+            important information.
+        </p>
+        <p>
+            <em>Italic text</em> can be used for emphasis.
+        </p>
+        <p>
+            <mark>Highlighted text</mark> attracts attention.
+        </p>
+        <p class="small-text">
+            This is small text.
+        </p>
+        <p class="big-text">
+            This is big text.
+        </p>
+    </div>
+</body>
+</html>

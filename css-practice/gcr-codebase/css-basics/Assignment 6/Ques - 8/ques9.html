@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Photo Gallery</title>
+    <style>
+        body {
+            font-family: Arial;
+            margin: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns:
+                repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        figure {
+            margin: 0;
+            overflow: hidden;
+        }
+        img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        img:hover {
+            transform: scale(1.05);
+        }
+        figcaption {
+            text-align: center;
+            padding: 10px;
+            background-color: lightgray;
+        }
+    </style>
+</head>
+<body>
+    <h1>Photo Gallery</h1>
+    <div class="gallery">
+        <figure>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhNqeEjuDS4BmJ1XfDNHv1exUGaaMoHVFrnVtSqfpHCQ&s=10">
+            <figcaption>Nature</figcaption>
+        </figure>
+        <figure>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdi9ZkWP6xXKLIJqfl7Z8jqMm6QLNDNe5XZWuyQqTLjQ&s=10">
+            <figcaption>Mountain</figcaption>
+        </figure>
+        <figure>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWNZg-9axHy2FT8o5HcrD4kh9n_l7uXzSJ2tohxUXbJQ&s=10">
+            <figcaption>Forest</figcaption>
+        </figure>
+        <figure>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTM0DwmWqof1rNrPcLFWmZiad-Tp1R0Xgm4Rky9eB1fTw&s=10">
+            <figcaption>Beach</figcaption>
+        </figure>
+        <figure>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCwJ9I9p392fRZZcYVn7gQFdhmnB97IrIirkLFm_ymgg&s=10">
+            <figcaption>City</figcaption>
+        </figure>
+        <figure>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQD__4G9PXEh-dkIwKI6-diZ-gnvO7v1tppbe6vrGVacg&s=10">
+            <figcaption>Travel</figcaption>
+        </figure>
+    </div>
+</body>
+</html>

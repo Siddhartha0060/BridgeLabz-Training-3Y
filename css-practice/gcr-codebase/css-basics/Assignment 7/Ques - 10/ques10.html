@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Navigation Bar</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: black;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 20px 30px;
+            border: 1px solid white;
+            transition: all 0.3s ease;
+        }
+        nav a:hover {
+            background-color: gray;
+        }
+        nav a.active {
+            background-color: rgb(38, 38, 105);
+        }
+        main {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: black;
+            color: white;
+        }
+        @media (max-width: 700px) {
+            nav {
+                flex-direction: column;
+            }
+            nav a {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#" class="active">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Projects</a>
+        <a href="#">Contact</a>
+    </nav>
+    <main>
+        <h1>Welcome to My Website</h1>
+    </main>
+    <footer>
+        <p>© 2026 Siddharth Singh</p>
+    </footer>
+</body>
+</html>

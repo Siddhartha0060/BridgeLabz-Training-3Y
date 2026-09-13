@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pricing</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+            background-color: #f2f2f2;
+        }
+        h1 {
+            text-align: center;
+        }
+        .pricing {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            padding: 50px;
+        }
+        .card {
+            width: 250px;
+            padding: 30px;
+            text-align: center;
+            background-color: white;
+            transition: 0.3s;
+            animation: fadeIn 1s;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+        }
+        .middle {
+            background-color: lightblue;
+            transform: scale(1.1);
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        @media (max-width: 750px) {
+            .pricing {
+                flex-direction: column;
+            }
+            .middle {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Our Pricing</h1>
+    <div class="pricing">
+        <div class="card">
+            <h2>Basic</h2>
+            <h3>₹599</h3>
+            <p>1 User</p>
+            <p>5 GB Storage</p>
+        </div>
+        <div class="card middle">
+            <h2>Premium</h2>
+            <h3>₹999</h3>
+            <p>5 Users</p>
+            <p>50 GB Storage</p>
+        </div>
+        <div class="card">
+            <h2>Pro</h2>
+            <h3>₹1599</h3>
+            <p>10 Users</p>
+            <p>100 GB Storage</p>
+        </div>
+    </div>
+</body>
+</html>
