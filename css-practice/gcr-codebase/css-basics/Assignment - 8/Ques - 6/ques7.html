@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Question 6 - CSS Animation</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            padding: 40px;
+            background-color: #f2f2f2;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-weight: bold;
+            border-radius: 10px;
+        }
+
+        .box1 {
+            background-color: red;
+            animation: move 2s ease-in-out infinite;
+        }
+
+        .box2 {
+            background-color: blue;
+            animation: move 2s ease-in-out infinite;
+            animation-delay: 0.5s;
+        }
+
+        .box3 {
+            background-color: green;
+            animation: move 2s ease-in-out infinite alternate;
+            animation-delay: 1s;
+        }
+
+        @keyframes move {
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-50px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Animation</h1>
+
+    <div class="container">
+
+        <div class="box box1">Box 1</div>
+
+        <div class="box box2">Box 2</div>
+
+        <div class="box box3">Box 3</div>
+
+    </div>
+
+</body>
+</html>

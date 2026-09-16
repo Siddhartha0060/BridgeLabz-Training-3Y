@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Question 7 - UI Components</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: linear-gradient(to right, #e3f2fd, #fce4ec);
+            padding: 30px;
+        }
+
+        .card {
+            max-width: 700px;
+            margin: auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px gray;
+
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .search {
+            display: flex;
+            gap: 10px;
+        }
+
+        .search input {
+            flex: 1;
+            padding: 12px;
+            border: 1px solid gray;
+            border-radius: 6px;
+        }
+
+        .search input:focus {
+            outline: 2px solid blue;
+        }
+
+        button {
+            padding: 12px 20px;
+            border: none;
+            border-radius: 6px;
+            background-color: blue;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: darkblue;
+        }
+
+        select {
+            padding: 12px;
+            border-radius: 6px;
+        }
+
+        select:focus {
+            outline: 2px solid blue;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+
+        <h1>Search Products</h1>
+
+        <div class="search">
+            <input type="text" placeholder="Search here">
+            <button>Search</button>
+        </div>
+
+        <button>Login</button>
+
+        <label>Select Category:</label>
+
+        <select>
+            <option>Electronics</option>
+            <option>Clothes</option>
+            <option>Books</option>
+            <option>Sports</option>
+        </select>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Question 8 - Box Sizing</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            padding: 30px;
+            background-color: #f2f2f2;
+        }
+
+        .container {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+        }
+
+        .box {
+            width: 300px;
+            padding: 30px;
+            border: 10px solid black;
+            height: 180px;
+        }
+
+        .content-box {
+            box-sizing: content-box;
+            background-color: lightblue;
+        }
+
+        .border-box {
+            box-sizing: border-box;
+            background-color: lightgreen;
+        }
+
+        h2 {
+            margin-top: 0;
+        }
+
+        @media (max-width: 700px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .box {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Box Sizing Comparison</h1>
+
+    <div class="container">
+
+        <div class="box content-box">
+            <h2>Content Box</h2>
+            <p>
+                Width does not include padding and border.
+            </p>
+        </div>
+
+        <div class="box border-box">
+            <h2>Border Box</h2>
+            <p>
+                Width includes padding and border.
+            </p>
+        </div>
+
+    </div>
+
+</body>
+</html>
