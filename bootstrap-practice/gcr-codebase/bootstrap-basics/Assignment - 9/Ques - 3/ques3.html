@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>Responsive Cards</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 30px;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .card {
+            flex: 1 1 calc(25% - 20px);
+            background-color: white;
+            padding: 25px;
+            text-align: center;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+        .card:hover {
+            background-color: #dbeafe;
+        }
+        @media (max-width: 900px) {
+            .card {
+                flex: 1 1 calc(50% - 20px);
+            }
+        }
+        @media (max-width: 600px) {
+            .card {
+                flex: 1 1 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Responsive Cards</h1>
+    <section class="cards">
+        <div class="card">
+            <h2>Card 1</h2>
+            <p>HTML and CSS</p>
+        </div>
+        <div class="card">
+            <h2>Card 2</h2>
+            <p>Responsive Design</p>
+        </div>
+        <div class="card">
+            <h2>Card 3</h2>
+            <p>Flexbox</p>
+        </div>
+        <div class="card">
+            <h2>Card 4</h2>
+            <p>Media Queries</p>
+        </div>
+    </section>
+</body>
+</html>

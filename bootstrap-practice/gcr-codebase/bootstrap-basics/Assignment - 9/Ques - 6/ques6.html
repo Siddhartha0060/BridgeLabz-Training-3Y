@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>Responsive CSS Cheat Sheet</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 30px;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+        .sheet {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        .box {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+        .box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px #aaa;
+        }
+        code {
+            background-color: #eee;
+            padding: 10px;
+            display: block;
+            margin-top: 10px;
+        }
+        @media (max-width: 900px) {
+            .sheet {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 700px) {
+            .sheet {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Responsive CSS Cheat Sheet</h1>
+    <section class="sheet">
+        <div class="box">
+            <h2>Filters</h2>
+            <p>
+                Filters change the appearance of images.
+            </p>
+            <code>
+                filter: grayscale(100%);
+            </code>
+        </div>
+        <div class="box">
+            <h2>Media Queries</h2>
+            <p>
+                Media queries apply CSS according to screen size.
+            </p>
+            <code>
+                @media (max-width: 700px)
+            </code>
+        </div>
+        <div class="box">
+            <h2>Responsive Design</h2>
+            <p>
+                Responsive design works on different devices.
+            </p>
+            <code>
+                width: 100%;
+            </code>
+        </div>
+        <div class="box">
+            <h2>Typography</h2>
+            <p>
+                clamp() can be used for responsive text.
+            </p>
+            <code>
+                font-size: clamp(1rem, 2vw, 2rem);
+            </code>
+        </div>
+    </section>
+</body>
+</html>

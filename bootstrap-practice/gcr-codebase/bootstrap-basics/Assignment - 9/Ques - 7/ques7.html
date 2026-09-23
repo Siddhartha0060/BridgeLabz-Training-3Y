@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>Combined Responsive Demo</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            animation: fadeIn 1s;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #222;
+            color: white;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 15px;
+        }
+        main {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 25px;
+        }
+        section {
+            padding: 20px;
+            background-color: #eef4ff;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+        section:hover {
+            transform: translateY(-5px);
+        }
+        .gallery img {
+            width: 100%;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #222;
+            color: white;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        @media (max-width: 700px) {
+            main {
+                grid-template-columns: 1fr;
+            }
+            header {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Responsive Demo</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <section class="gallery">
+            <h2>Image Gallery</h2>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdi9ZkWP6xXKLIJqfl7Z8jqMm6QLNDNe5XZWuyQqTLjQ&s=10"
+                 alt="Mountain">
+        </section>
+        <section>
+            <h2>Responsive Design</h2>
+            <p>
+                Responsive design makes a website adjust
+                to different screen sizes.
+            </p>
+        </section>
+        <section>
+            <h2>Cheat Sheet</h2>
+            <p>
+                <b>Grid:</b> Creates layouts.
+            </p>
+            <p>
+                <b>Flexbox:</b> Aligns items.
+            </p>
+            <p>
+                <b>Media Query:</b> Changes CSS for screen sizes.
+            </p>
+        </section>
+    </main>
+    <footer>
+        Contact: example@email.com
+    </footer>
+</body>
+</html>

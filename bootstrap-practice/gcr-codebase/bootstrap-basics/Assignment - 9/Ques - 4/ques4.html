@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>Responsive Typography</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        section {
+            text-align: center;
+            padding: 60px 10%;
+            background-color: #eef4ff;
+        }
+        h1 {
+            font-size: clamp(1.5rem, 4vw, 3rem);
+        }
+        p {
+            font-size: clamp(1rem, 2vw, 1.5rem);
+            line-height: 1.6;
+        }
+        @media (max-width: 700px) {
+            section {
+                padding: 30px 20px;
+            }
+            p {
+                line-height: 1.8;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h1>Responsive Typography</h1>
+        <p>
+            Responsive typography means that text changes
+            its size according to the screen width.
+            The clamp() function helps us create readable
+            text for different screen sizes.
+        </p>
+    </section>
+</body>
+</html>

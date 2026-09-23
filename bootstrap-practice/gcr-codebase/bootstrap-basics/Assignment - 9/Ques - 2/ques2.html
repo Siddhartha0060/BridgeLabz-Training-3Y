@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>Responsive Web Design</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #222;
+            color: white;
+            padding: 20px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+        main {
+            padding: 30px;
+        }
+        .features {
+            display: flex;
+            gap: 20px;
+        }
+        .box {
+            flex: 1;
+            background-color: #e8f0ff;
+            padding: 30px;
+            text-align: center;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+        .box:hover {
+            transform: scale(1.05);
+        }
+        footer {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        @media (max-width: 750px) {
+            .features {
+                flex-direction: column;
+            }
+            header {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Website</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Our Features</h2>
+        <section class="features">
+            <div class="box">
+                <h3>Fast</h3>
+                <p>Our website is simple and fast.</p>
+            </div>
+            <div class="box">
+                <h3>Responsive</h3>
+                <p>It works on different screen sizes.</p>
+            </div>
+            <div class="box">
+                <h3>Easy</h3>
+                <p>It is easy to use.</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>© 2026 My Website</p>
+    </footer>
+</body>
+</html>

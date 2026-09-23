@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>Responsive Design Principles</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 30px;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+        .principles {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        .box {
+            padding: 25px;
+            background-color: white;
+            border-radius: 10px;
+            transition: 0.4s;
+        }
+        .box:hover {
+            background: linear-gradient(
+                135deg,
+                #dbeafe,
+                #e0e7ff
+            );
+            color: #111827;
+        }
+        code {
+            display: block;
+            margin-top: 15px;
+            background-color: #eee;
+            padding: 10px;
+        }
+        @media (max-width: 600px) {
+            .principles {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Responsive Design Principles</h1>
+    <section class="principles">
+        <div class="box">
+            <h2>Fluid Layouts</h2>
+            <p>
+                Fluid layouts use flexible sizes so that
+                the layout can adjust to the screen.
+            </p>
+            <code>
+                width: 100%;
+            </code>
+        </div>
+        <div class="box">
+            <h2>Flexible Media</h2>
+            <p>
+                Images and videos should fit inside
+                their containers.
+            </p>
+            <code>
+                max-width: 100%;
+            </code>
+        </div>
+        <div class="box">
+            <h2>Breakpoints</h2>
+            <p>
+                Breakpoints change the layout at
+                specific screen widths.
+            </p>
+            <code>
+                @media (max-width: 600px)
+            </code>
+        </div>
+    </section>
+</body>
+</html>

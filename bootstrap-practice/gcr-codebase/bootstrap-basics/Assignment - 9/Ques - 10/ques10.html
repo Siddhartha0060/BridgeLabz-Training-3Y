@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>Responsive Dashboard</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            animation: load 1s;
+        }
+        .dashboard {
+            display: grid;
+            grid-template-columns: 220px 1fr;
+            grid-template-rows: 70px 1fr;
+            min-height: 100vh;
+        }
+        header {
+            grid-column: 1 / -1;
+            background-color: #0e0d2b;
+            color: white;
+            padding: 20px;
+        }
+        aside {
+            background-color: #eee;
+            padding: 20px;
+        }
+        main {
+            padding: 25px;
+        }
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+        .card {
+            background-color: white;
+            border: 1px solid #ddd;
+            padding: 25px;
+            border-radius: 10px;
+            transition: 0.3s;
+            box-shadow: 0 2px 5px #ddd;
+        }
+        .card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 8px 20px #bbb;
+        }
+        @keyframes load {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        @media (max-width: 750px) {
+            .dashboard {
+                display: block;
+            }
+            aside {
+                margin-bottom: 10px;
+            }
+            .cards {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard">
+        <header>
+            <h1>Responsive Dashboard</h1>
+        </header>
+        <aside>
+            <h2>Sidebar</h2>
+            <p>Home</p>
+            <p>Profile</p>
+            <p>Settings</p>
+        </aside>
+        <main>
+            <h2>Dashboard Content</h2>
+            <section class="cards">
+                <div class="card">
+                    <h3>Filters</h3>
+                    <p>
+                        CSS filters change image appearance.
+                    </p>
+                </div>
+                <div class="card">
+                    <h3>Typography</h3>
+                    <p>
+                        Use clamp() for responsive text.
+                    </p>
+                </div>
+                <div class="card">
+                    <h3>Media Queries</h3>
+                    <p>
+                        Change layouts for different screens.
+                    </p>
+                </div>
+                <div class="card">
+                    <h3>Cheat Sheet Links</h3>
+                    <p>
+                        Useful responsive CSS concepts.
+                    </p>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

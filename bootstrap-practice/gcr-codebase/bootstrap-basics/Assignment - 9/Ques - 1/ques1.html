@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Filter Gallery</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+        header {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        main {
+            padding: 30px;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns:
+                repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        .image-box {
+            background-color: white;
+            padding: 10px;
+            text-align: center;
+            border-radius: 10px;
+        }
+        .image-box img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            transition: 0.5s;
+        }
+        .blur {
+            filter: blur(3px);
+        }
+        .grayscale {
+            filter: grayscale(100%);
+        }
+        .sepia {
+            filter: sepia(100%);
+        }
+        .brightness {
+            filter: brightness(150%);
+        }
+        .contrast {
+            filter: contrast(180%);
+        }
+        .hue {
+            filter: hue-rotate(90deg);
+        }
+        .image-box img:hover {
+            filter: none;
+        }
+        @media (max-width: 600px) {
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Responsive Image Filter Gallery</h1>
+    </header>
+    <main>
+        <div class="gallery">
+            <div class="image-box">
+                <img class="blur"
+                     src="https://picsum.photos/id/1015/500/300"
+                     alt="Mountain">
+                <p>Blur</p>
+            </div>
+            <div class="image-box">
+                <img class="grayscale"
+                     src="https://picsum.photos/id/1016/500/300"
+                     alt="Nature">
+                <p>Grayscale</p>
+            </div>
+            <div class="image-box">
+                <img class="sepia"
+                     src="https://picsum.photos/id/1025/500/300"
+                     alt="Dog">
+                <p>Sepia</p>
+            </div>
+            <div class="image-box">
+                <img class="brightness"
+                     src="https://picsum.photos/id/1035/500/300"
+                     alt="Forest">
+                <p>Brightness</p>
+            </div>
+            <div class="image-box">
+                <img class="contrast"
+                     src="https://picsum.photos/id/1043/500/300"
+                     alt="Beach">
+                <p>Contrast</p>
+            </div>
+            <div class="image-box">
+                <img class="hue"
+                     src="https://picsum.photos/id/1050/500/300"
+                     alt="Animal">
+                <p>Hue Rotate</p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
