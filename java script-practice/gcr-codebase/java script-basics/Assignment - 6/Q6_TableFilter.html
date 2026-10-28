@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Table Filter</title>
+<style>
+    body {
+        font-family: Arial;
+        max-width: 650px;
+        margin: 30px auto;
+    }
+    input {
+        width: 95%;
+        padding: 10px;
+        margin-bottom: 15px;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    th, td {
+        border: 1px solid black;
+        padding: 10px;
+        text-align: left;
+    }
+    th {
+        background-color: lightblue;
+    }
+    #noResults {
+        display: none;
+        color: red;
+    }
+</style>
+</head>
+<body>
+<h2>Student Records</h2>
+<input type="text" id="searchInput"
+       placeholder="Search student by name">
+<table id="studentTable">
+    <thead>
+        <tr>
+            <th>Roll No.</th>
+            <th>Name</th>
+            <th>Course</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>101</td>
+            <td>Rahul</td>
+            <td>B.Tech</td>
+        </tr>
+        <tr>
+            <td>102</td>
+            <td>Aman</td>
+            <td>BCA</td>
+        </tr>
+        <tr>
+            <td>103</td>
+            <td>Priya</td>
+            <td>B.Tech</td>
+        </tr>
+        <tr>
+            <td>104</td>
+            <td>Rohit</td>
+            <td>BBA</td>
+        </tr>
+        <tr>
+            <td>105</td>
+            <td>Neha</td>
+            <td>BCA</td>
+        </tr>
+    </tbody>
+</table>
+<p id="noResults">No results found.</p>
+<script src="Q6_TableFilter.js"></script>
+</body>
+</html>

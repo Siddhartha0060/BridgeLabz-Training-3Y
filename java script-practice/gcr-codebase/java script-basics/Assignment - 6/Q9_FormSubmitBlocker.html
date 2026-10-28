@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Validation</title>
+<style>
+    body {
+        font-family: Arial;
+        max-width: 400px;
+        margin: 30px auto;
+    }
+    input {
+        width: 95%;
+        padding: 10px;
+        margin: 8px 0;
+    }
+    .error {
+        color: red;
+        font-size: 14px;
+    }
+    #success {
+        color: green;
+        font-weight: bold;
+    }
+    button {
+        padding: 10px 20px;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+<h2>Registration Form</h2>
+<form id="registrationForm" novalidate>
+    <label>Name:</label>
+    <input type="text" id="name" placeholder="Enter your name">
+    <p id="nameError" class="error"></p>
+    <label>Email:</label>
+    <input type="text" id="email" placeholder="Enter your email">
+    <p id="emailError" class="error"></p>
+    <label>Password:</label>
+    <input type="password" id="password"
+           placeholder="Enter password">
+    <p id="passwordError" class="error"></p>
+    <button type="submit">Submit</button>
+</form>
+<p id="success"></p>
+<script src="Q9_FormSubmitBlocker.js"></script>
+</body>
+</html>

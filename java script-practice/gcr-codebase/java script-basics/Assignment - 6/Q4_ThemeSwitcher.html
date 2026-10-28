@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Theme Switcher</title>
+<style>
+    body {
+        font-family: Arial;
+        text-align: center;
+        padding: 50px;
+        transition: 0.3s;
+    }
+    body[data-theme="light"] {
+        background-color: white;
+        color: black;
+    }
+    body[data-theme="dark"] {
+        background-color: #222;
+        color: white;
+    }
+    body[data-theme="blue"] {
+        background-color: lightblue;
+        color: darkblue;
+    }
+    button {
+        padding: 10px 20px;
+        margin: 5px;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body data-theme="light">
+<h1>Theme Switcher</h1>
+<p>Select your favourite theme.</p>
+<button id="lightButton">Light Theme</button>
+<button id="darkButton">Dark Theme</button>
+<button id="blueButton">Blue Theme</button>
+<p>Current Theme: <span id="currentTheme">Light</span></p>
+<script src="Q4_ThemeSwitcher.js"></script>
+</body>
+</html>

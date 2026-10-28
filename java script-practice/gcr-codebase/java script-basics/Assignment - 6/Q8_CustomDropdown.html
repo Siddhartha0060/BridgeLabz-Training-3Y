@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Custom Dropdown</title>
+<style>
+    body {
+        font-family: Arial;
+        text-align: center;
+        padding: 50px;
+    }
+    #dropdown {
+        display: inline-block;
+        position: relative;
+    }
+    #dropdownButton {
+        padding: 12px 25px;
+        cursor: pointer;
+    }
+    #options {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        border: 1px solid gray;
+    }
+    #options button {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        border: none;
+        background-color: white;
+        cursor: pointer;
+    }
+    #options button:hover {
+        background-color: lightblue;
+    }
+    #options.show {
+        display: block;
+    }
+</style>
+</head>
+<body>
+<h2>Custom Dropdown Menu</h2>
+<div id="dropdown">
+    <button id="dropdownButton">
+        Select a Course
+    </button>
+    <div id="options">
+        <button class="option">B.Tech</button>
+        <button class="option">BCA</button>
+        <button class="option">MCA</button>
+        <button class="option">MBA</button>
+    </div>
+</div>
+<p id="selectedCourse">No course selected.</p>
+<script src="Q8_CustomDropdown.js"></script>
+</body>
+</html>
